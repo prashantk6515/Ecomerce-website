@@ -1,0 +1,21 @@
+{
+  "name": "ecommerce-platform",
+  "version": "1.0.0",
+  "description": "Full-Stack E-Commerce Website (React + Vite, Node.js + Express, MongoDB, Stripe Sandbox)",
+  "main": "backend/src/server.js",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "server": "npm --prefix backend run dev",
+    "client": "npm --prefix frontend run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev:standalone": "concurrently \"npm --prefix backend run dev:standalone\" \"npm --prefix frontend run dev\"",
+    "test:backend": "npm --prefix backend test",
+    "seed": "npm --prefix backend run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": ["ecommerce", "react", "express", "mongodb", "stripe"],
+  "author": "",
+  "license": "MIT"
+}
